@@ -12,7 +12,7 @@ function App() {
 
   let internalCss = {
     color: "pink",
-    backgroundColor: "black"
+    backgroundColor: "green"
     
   }
   return (
@@ -51,7 +51,10 @@ function App() {
     <br />
     <h1 className='ex'>Use the Onother page here </h1>
 
-    < About/>
+<div className='ab'>
+     < About/>
+</div>
+ 
     <hr />
     <Help/>
     <hr />

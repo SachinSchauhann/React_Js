@@ -5,7 +5,8 @@ function App(){
       <>
       
       <Child1 name="Sachin"/>
-      
+      {/* <Child1 lname= "Singh"/>
+       */}
       
       </>
   )

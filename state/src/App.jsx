@@ -1,4 +1,5 @@
 import { useState } from "react"
+import About from "../About"
 
 function App() {
  let [name, setName] =useState("Sachin")
@@ -24,8 +25,12 @@ function App() {
      <button onClick={()=>setColor('red')}>Red</button>
      <button onClick={()=>setColor('blue')}>Blue</button>
      <button onClick={()=>setColor('green')}>Green</button>
+     
      {/* <button onClick={()=>setColor()}>set by user</button> */}
+
+     <About/>
      </div>
+    
     </>
   )
 }

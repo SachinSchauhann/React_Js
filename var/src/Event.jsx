@@ -18,6 +18,9 @@ const Event = () =>{
         <button onMouseMove={fun}>Mouse left</button>
         <button onMouseDown={fun}>Mouse</button>
         <button onMouseOut={Danf}>Mouse 3</button>
+        <button onMouseUpCapture={Danf}>Mouse 4</button>
+        <button onMouseOutCapture={Danf}>Mouse 5</button>
+
         </>
     )
 

@@ -1,7 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
 import About from "../About"
 
 function App() {
+  let [valu , setValu] = useState(0)
+
+  useEffect(()=>{alert("UseEffect is working")},[])
  let [name, setName] =useState("Sachin")
  let [age ,setAge] = useState(23)
  let [color,setColor] = useState("")
@@ -11,6 +15,10 @@ function App() {
 
   return (
     <>
+
+    <h1>{valu}</h1>
+    <button onClick={()=>setValu(valu+1)}>increse</button>
+    <button onClick={()=>setValu(valu-1)}>decrese</button>
  <div style={{height:"100vh", backgroundColor:color}}>
 
      <h1>My Name Is {name}</h1>

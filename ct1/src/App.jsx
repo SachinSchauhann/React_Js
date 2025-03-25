@@ -1,5 +1,6 @@
 import About from "./About"
 
+
 function App() {
   
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <h1>app </h1>
       <About/>
+     
     </>
   )
 }

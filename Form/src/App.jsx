@@ -1,58 +1,40 @@
 import React, { useState } from 'react'
+import Signup from './Signup'
 
 function App() {
-  let [frmdata, setFrmdata] =useState()
+  let [frmdata, setFrmdata] =useState({
+    username:"",age:"",contect:"" 
+  })
   function Inputvalue(e){
-    console.log(e.target.value);
-    setFrmdata(e.target.value)
+    const {name,value}=e.target
+    setFrmdata({...frmdata,[name]:value})
+    
   }
-    let [frmdata2, setFrmdata2] =useState()
-    function Inputvalue2(e){
-      console.log(e.target.value);
-      setFrmdata2(e.target.value)
-    }
-      let [frmdata3, setFrmdata3] =useState()
-      function Inputvalue3(e){
-        console.log(e.target.value);
-        setFrmdata3(e.target.value)
-      }
-        let [frmdata4, setFrmdata4] =useState()
-        function Inputvalue4(e){
-          console.log(e.target.value);
-          setFrmdata4(e.target.value)
-        }
-          let [frmdata5, setFrmdata5] =useState()
-        // usename: "", collage:" ",
-          function Inputvalue5(e){
-           // const {name,value} =e.target
-            ///setFrmdata({...frmdata,[name]:value})
-            console.log(e.target.value);
-            setFrmdata5(e.target.value)
+  function finalsubmit(e){
+    e.preventDefault()
+    console.log(frmdata)
+    localStorage.setItem("userdata1",JSON.stringify(frmdata))
   }
-
-
   return (
     <>
     
-     <form action="">
+
+    <form onSubmit={finalsubmit}>
       <label htmlFor="">Name :</label>
-      <input type="text" onChange={Inputvalue}/> <br /><br />
-      <label htmlFor="">Collage :</label>
-      <input type="text" onChange={Inputvalue2}/><br /><br />
-      <label htmlFor="">Home :</label>
-      <input type="text" onChange={Inputvalue3}/><br /><br />
-      <label htmlFor="">Course :</label>
-      <input type="text" onChange={Inputvalue4}/><br /><br />
-      <label htmlFor="">State :</label>
-      <input type="text" onChange={Inputvalue5}/><br /><br />
+      <input type="text" name='username' onChange={Inputvalue}/> <br /><br />
+      <label htmlFor="">Age :</label>
+      <input type="text" name='age' onChange={Inputvalue}/><br /><br />
+      <label htmlFor="">Contect :</label>
+      <input type="text" name='contect' onChange={Inputvalue}/><br /><br />
+      <input type="submit" />
      </form>
       
 
-     <h1>Hello : {frmdata}</h1>
-    <h1>Your Collage : {frmdata2} </h1>
-    <h1>Your Home  : {frmdata3}</h1>
-    <h1>Your Course  : {frmdata4}</h1>
-    <h1>Your State : {frmdata5}</h1>
+    {/* <h1>username: {frmdata.username}</h1>
+    <h1>Your Age : {frmdata.age} </h1>
+    <h1>Your Contect : {frmdata.contect}</h1> */}
+   <br /><br /><br />
+<Signup/>
     </>
   )
 }

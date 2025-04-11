@@ -18,13 +18,14 @@ function Sign() {
     }
   return (
     <>
+    <h1>Singup page</h1>
       <form action="" onSubmit={finalSubmit}>
         <label> Name</label>
-        <input type="text" name= "name" onChange={Inputhandle}/>   <br/>
+        <input type="text" name= "name" required onChange={Inputhandle}/>   <br/>
         <label> Email</label>
-        <input type="text" name= "email" onChange={Inputhandle}/><br/>
+        <input type="text" name= "email" required onChange={Inputhandle}/><br/>
         <label> Password</label>
-        <input type="text" name= "password" onChange={Inputhandle}/><br/><br/>
+        <input type="text" name= "password" required onChange={Inputhandle}/><br/><br/>
 
         <input type="submit" />
         

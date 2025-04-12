@@ -1,0 +1,17 @@
+{
+    "userdata":[
+        {
+            "uname": "sachin",
+            "age" : 23,
+            "contect": 456789,
+            "city":"Basti"
+        },
+
+        {
+            "uname": "rahul",
+            "age" : 24,
+            "contect": 456787,
+            "city":"Basti Badeban"
+        }
+    ]
+}
